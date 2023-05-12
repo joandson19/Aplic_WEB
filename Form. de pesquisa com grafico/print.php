@@ -3,38 +3,14 @@
 <head>
   <title>Resultados da Pesquisa</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <style>
-    body {
-      text-align: center;
-    }
-    img {
-      max-width: 200%;
-      height: auto;
-      margin-bottom: 20px;
-    }
-	#grafico {
-		width: 10%;
-		height: 10%;
-	}
-	.logo {
-		display: block;
-		margin: 0 auto;
-		width: 200px;
-		height: auto;
-		margin-bottom: 20px;
-	}	
-  </style>
-  
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 <body>
-  <img src="logo.png" alt="Logo da Empresa" class="logo">
+  <img src="../images/logo.png" alt="Logo da Empresa" class="logo">
   <h1>Resultados da Pesquisa</h1>
   <?php
-// Conexão com o banco de dados
-$servername = "localhost";
-$username = "user";
-$password = "pass";
-$dbname = "bd";
+  
+require('dados.php');
 
   $conn = mysqli_connect($servername, $username, $password, $dbname);
 

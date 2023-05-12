@@ -1,14 +1,6 @@
 <?php
 
-// informar as chaves do ReCaptcha Google v2 abaixo:
-$chave_de_site = 'chave_de_site';
-$chave_secreta = 'chave_secreta';
-
-// Conexão com o banco de dados
-$servername = "localhost";
-$username = "user";
-$password = "pass";
-$dbname = "bd";
+require('dados.php');
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
@@ -74,86 +66,7 @@ mysqli_close($conn);
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Pesquisa de Serviços</title>
-	<style>
-		body {
-			font-family: Arial, sans-serif;
-			text-align: center;
-			background-color: #f2f2f2;
-		}
-
-		h1 {
-			margin-top: 50px;
-			margin-bottom: 30px;
-			font-size: 36px;
-			color: #333;
-		}
-
-		form {
-			display: inline-block;
-			text-align: left;
-			border-radius: 10px;
-			background-color: #fff;
-			padding: 20px;
-			box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
-		}
-
-		input[type="text"],
-		input[type="email"] {
-			padding: 10px;
-			margin-bottom: 20px;
-			border-radius: 5px;
-			border: none;
-			box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
-			width: 96%; 
-			max-width: 500px;
-		}
-		
-		input[type="radio"] {
-			padding: 10px;
-			margin-bottom: 20px;
-			border-radius: 5px;
-			border: none;
-			box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
-			/* width: 20%; */
-			max-width: 500px;
-		}
-
-		input[type="submit"] {
-			background-color: #4CAF50;
-			color: #fff;
-			font-size: 18px;
-			padding: 10px 20px;
-			border: none;
-			border-radius: 5px;
-			cursor: pointer;
-			transition: background-color 0.3s ease;
-		}
-
-		input[type="submit"]:hover {
-			background-color: #3e8e41;
-		}
-
-		label {
-			display: block;
-			font-size: 18px;
-			color: #333;
-			margin-bottom: 10px;
-			vertical-align: middle;
-		}
-
-		.logo {
-			display: block;
-			margin: 0 auto;
-			width: 200px;
-			height: auto;
-			margin-bottom: 20px;
-		}
-
-		.question-group {
-			max-width: 500px;
-			margin-bottom: 20px;
-		}
-	</style>
+			<link rel="stylesheet" type="text/css" href="stylesheet.css">
 	<script src='https://www.google.com/recaptcha/api.js?hl=pt-BR' async defer></script>
 	<script>
 		function validarFormulario() {
@@ -168,8 +81,8 @@ mysqli_close($conn);
 </script>
 </head>
 <body>
-	<img src="logo.png" alt="Logo" class="logo">
-	<h1>Pesquisa de Serviços</h1>
+	<img src="../images/logo.png" alt="Logo" class="logo">
+	<h1>Pesquisa de AlagoinhasTelecom</h1>
 	<p>Por favor, responda algumas perguntas sobre os serviços que você gostaria de ver adicionados à nossa empresa.</p>
 	<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 		<label for="nome">Nome:</label>
@@ -183,9 +96,9 @@ mysqli_close($conn);
 			<input type="radio" name="servico" value="App de Livros">App de Livros<br>
 			<input type="radio" name="servico" value="App de Filmes">App de Filmes<br>
 			<input type="radio" name="servico" value="App de Música">App de Música<br>
-			<input type="radio" name="servico" value="App de Consulta Médica">App de Consulta Médica<br><br>
+			<input type="radio" name="servico" value="App de Consulta Médica">App de Consulta Médica<br>
 		
-			<div class="g-recaptcha" data-sitekey="<?php echo $chave_de_site; ?>"></div>
+			<div class="g-recaptcha" data-sitekey="<?php echo $chave_de_site; ?>"></div><br>
 			<input type="submit" value="Enviar">
 			
 		</div>
