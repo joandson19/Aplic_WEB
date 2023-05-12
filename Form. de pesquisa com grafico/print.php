@@ -16,11 +16,18 @@
 		width: 10%;
 		height: 10%;
 	}
+	.logo {
+		display: block;
+		margin: 0 auto;
+		width: 200px;
+		height: auto;
+		margin-bottom: 20px;
+	}	
   </style>
   
 </head>
 <body>
-  <img src="logo.png" alt="Logo da Empresa">
+  <img src="logo.png" alt="Logo da Empresa" class="logo">
   <h1>Resultados da Pesquisa</h1>
   <?php
 // Conexão com o banco de dados
