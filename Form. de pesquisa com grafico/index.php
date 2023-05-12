@@ -82,7 +82,7 @@ mysqli_close($conn);
 </head>
 <body>
 	<img src="../images/logo.png" alt="Logo" class="logo">
-	<h1>Pesquisa de AlagoinhasTelecom</h1>
+	<h1>Pesquisa</h1>
 	<p>Por favor, responda algumas perguntas sobre os serviços que você gostaria de ver adicionados à nossa empresa.</p>
 	<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 		<label for="nome">Nome:</label>
