@@ -1,7 +1,7 @@
 <?php
 
-$telegramBotToken = 'efefefef';
-$chatId = 'efefefe';
-$chave_secreta = 'efefefe'; // Substitua pela sua chave secreta correta do reCAPTCHA
-$chave_site = 'efefefef'; // Substitua pela sua chave de site correta do reCAPTCHA
+$telegramBotToken = 'xxxxxxxxx';
+$chatId = 'xxxxxxxxxxxxx';
+$chave_secreta = 'xxxxxxxxxxxxx'; // Substitua pela sua chave secreta correta do reCAPTCHA
+$chave_site = 'xxxxxxxxxx'; // Substitua pela sua chave de site correta do reCAPTCHA
 ?>
